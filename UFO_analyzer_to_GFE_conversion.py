@@ -174,8 +174,10 @@ def ufo_to_std(ufo_1):
         # Right Ascension / Declination coordinates read from file
         ra_array  = []
         dec_array = []
-
-        for i in range(nlines):
+        
+        N_records = len(ufo_6)
+        print(f'{N_records} records found')
+        for i in range(N_records):
             obs=ufo_6[i]
             az   = float(obs['@az'])
             elev = float(obs['@ev'])
